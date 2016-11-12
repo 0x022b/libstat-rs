@@ -1,0 +1,14 @@
+[package]
+name = "libstat"
+version = "0.1.0"
+authors = ["Janne K <0x022b@gmail.com>"]
+license = "MIT"
+repository = "https://github.com/scoobadog/libstat-rs"
+description = "Statistics utilities"
+keywords = ["analysis", "ema", "sma", "rsi"]
+
+[lib]
+name = "stat"
+
+[dependencies]
+libmath = "0.1"
