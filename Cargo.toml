@@ -1,6 +1,6 @@
 [package]
 name = "libstat"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Janne K <0x022b@gmail.com>"]
 license = "MIT"
 repository = "https://github.com/scoobadog/libstat-rs"
@@ -11,4 +11,4 @@ keywords = ["analysis", "ema", "sma", "rsi"]
 name = "stat"
 
 [dependencies]
-libmath = "0.1"
+libmath = "~0.1.3"

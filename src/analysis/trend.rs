@@ -71,7 +71,7 @@ pub fn simple_moving_average(slice: &[f64]) -> Result<f64> {
 mod tests {
 	extern crate math;
 	use analysis::{AnalysisError, Result};
-	use self::math::round::half_up;
+	use self::math::round::half_to_even;
 	use std::error::Error;
 
 	#[test]
@@ -84,8 +84,8 @@ mod tests {
 		];
 		let results: [f64; 21] = [
 			22.221000, 22.208091, 22.241165, 22.266408, 22.328879, 22.516356,
-			22.795200, 22.968800, 23.125382, 23.275313, 23.339802, 23.427111,
-			23.507636, 23.533520, 23.471062, 23.403596, 23.390215, 23.261085,
+			22.795200, 22.968800, 23.125382, 23.275312, 23.339801, 23.427110,
+			23.507635, 23.533520, 23.471062, 23.403596, 23.390215, 23.261085,
 			23.231797, 23.080561, 22.915004,
 		];
 		let tests: [(&[f64], Option<f64>, Result<f64>); 22] = [
@@ -117,7 +117,7 @@ mod tests {
 			let result = super::exponential_moving_average(test.0, test.1);
 			match (result, test.2.as_ref()) {
 				(Ok(val), Ok(exp))
-					=> assert_eq!(half_up(val, 6), *exp),
+					=> assert_eq!(half_to_even(val, 6), *exp),
 				(Err(err), Err(exp))
 					=> assert_eq!(err.description(), exp.description()),
 				_ => panic!("return type mismatch"),
@@ -167,7 +167,7 @@ mod tests {
 			let result = super::simple_moving_average(test.0);
 			match (result, test.1.as_ref()) {
 				(Ok(val), Ok(exp))
-					=> assert_eq!(half_up(val, 3), *exp),
+					=> assert_eq!(half_to_even(val, 3), *exp),
 				(Err(err), Err(exp))
 					=> assert_eq!(err.description(), exp.description()),
 				_ => panic!("return type mismatch"),
