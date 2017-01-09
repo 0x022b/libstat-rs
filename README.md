@@ -1,5 +1,7 @@
-[![Build Status](https://travis-ci.org/scoobadog/libstat-rs.svg?branch=master)](https://travis-ci.org/scoobadog/libstat-rs)
+[![Build Status](https://img.shields.io/travis/scoobadog/libstat-rs.svg)](https://travis-ci.org/scoobadog/libstat-rs)
+![Latest Tag](https://img.shields.io/github/tag/scoobadog/libstat-rs.svg)
 [![Latest Crate](https://img.shields.io/crates/v/libstat.svg)](https://crates.io/crates/libstat)
+![Crate Downloads](https://img.shields.io/crates/d/libstat.svg)
 
 # libstat
 
